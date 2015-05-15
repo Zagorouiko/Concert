@@ -1,0 +1,11 @@
+<% if @venues.any? %>
+  <h2>Venues</h2>
+    <ul>
+    <% @venues.each() do |venue| %>
+      <li><a href="/venue/<%= venue.id %>/bands"><%= venue.name %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You have not created any categories yet. Please create one! </p>
+
+<% end %>

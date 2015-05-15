@@ -1,0 +1,23 @@
+<h1><%= @venue.name %> Bands</h1>
+
+<% if @bands.any? %>
+  <h4>Here is a list of Bands:</h4>
+  <ul>
+    <% @recipes.each() do |recipe| %>
+    <li><a href='/venue/<%= @venue.id %>/band/<%= band.id %>'><%= band.name %></a></li>
+    <% end %>
+  </ul>
+
+  <% else %>
+  <p>You have not listed any bands yet.</p>
+
+  <% end %>
+
+  <form action='/venue/<%= @venue.id %>' method='post'>
+    <div class='form-group'>
+      <input name="_method" type="hidden" value="delete">
+      <button id='delete_venue' class='btn btn-danger'>Delete Category</button>
+    </div>
+  </form>
+
+  <a href='/'>Back</a>
