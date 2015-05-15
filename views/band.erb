@@ -1,0 +1,27 @@
+<h1><%= @band.name %></h1>
+<p>Rating: <%= @band.name %></p>
+
+<p><form action="/venue/<%= @venue.id %>/band/<%= @band.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input name="name" id="name" placeholder="Edit Band Name" type="text">
+
+
+    <label for="rating_dropdown">Edit Rating</label>
+    <select id='rating_dropdown' name='rating_dropdown' type='text'>
+      <option value="1"> 1 </option>
+      <option value="2"> 2 </option>
+      <option value="3"> 3 </option>
+      <option value="4"> 4 </option>
+      <option value="5"> 5 </option>
+    </select>
+
+    <button type="update_band" class="btn-success">Update Band</button>
+  </form></p>
+
+
+<form action='/venue/<%= @venue.id %>/band/<%= @band.id %>' method='post'>
+  <div class='form-group'>
+    <input name="_method" type="hidden" value="delete">
+    <button id='delete_band' class='btn btn-danger'>Delete Band</button>
+  </div>
+</form>

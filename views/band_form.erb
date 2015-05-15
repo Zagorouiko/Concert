@@ -1,0 +1,25 @@
+<% if @venues.any?() %>
+
+  <h3>Add a New Recipe</h3>
+  <form action="/bands" method="post">
+    <label for="name">Enter in the name of the band:</label>
+    <input id="name" name="name" class='form-control' placeholder="Band Name" required>
+
+    <p><b>Select the venues this band has played at:</b></p>
+      <% @venues.each() do |venue| %>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="venue_ids[]" value="<%= venue.id() %>"><%= venue.name() %>
+          </label>
+        </div>
+      <% end %>
+
+    <button type="submit">Add a Band</button>
+  </form>
+
+<% else %>
+
+  <p>There are no bands yet. Please add a band first.</p>
+  <a class='btn btn-default' href='/' role='button'>Back</a>
+
+<% end %>

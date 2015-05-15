@@ -3,7 +3,7 @@
 <% if @bands.any? %>
   <h4>Here is a list of Bands:</h4>
   <ul>
-    <% @recipes.each() do |recipe| %>
+    <% @bands.each() do |band| %>
     <li><a href='/venue/<%= @venue.id %>/band/<%= band.id %>'><%= band.name %></a></li>
     <% end %>
   </ul>
@@ -16,7 +16,7 @@
   <form action='/venue/<%= @venue.id %>' method='post'>
     <div class='form-group'>
       <input name="_method" type="hidden" value="delete">
-      <button id='delete_venue' class='btn btn-danger'>Delete Category</button>
+      <button id='delete_venue' class='btn btn-danger'>Delete Venue</button>
     </div>
   </form>
 
