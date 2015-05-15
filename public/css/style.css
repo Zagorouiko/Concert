@@ -14,6 +14,7 @@ a {
 }
 
 a .hidden {
+  text-color: black;
   display: none;
   visibility: hidden;
 }
@@ -39,4 +40,8 @@ a .hidden {
 
 .sidebar-wrapper {
 	background-color: black;
+}
+
+h1 {
+  text-color: white;
 }
