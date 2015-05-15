@@ -47,7 +47,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" <a class='btn btn-default' href='/'>Home</a>
+      <a class="navbar-brand" <a class='btn btn-default' href='/'><font face="impact">Home</font></a>
     </div>
 
 
@@ -56,8 +56,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-        <li><a href='/bands/new'>Add Band</a></li>
-        <li><a href='/bands'>Band List</a></li>
+        <li><a href='/bands/new'><font face="Georgia">Add Band</font></a></li>
+        <li><a href='/bands'><font face="Georgia">Band List</font></a></li>
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Used books<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -97,7 +97,14 @@
 	<span class="glyphicon glyphicon-cloud"></span>
       </p>
 
-      <div class="container">
+      <div class="container" style="
+    padding-right: 500px;
+    height: 800px;
+">
+
+  </ul>
+
+  </div>
     </form>
   </div>
     </nav>
@@ -111,8 +118,21 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<p class="two" style="
+background-color: black;
+">
 
-  <div class="container">
+<div class="container" style="
+padding-right: 0px;
+height: 449px;
+width: 365px;
+margin-left: 0px;
+margin-right: 0px;
+background: rgba(500, 500, 500, 0.5);
+">
+
+</p>
+
     <%= yield %>
   </div>
 </body>

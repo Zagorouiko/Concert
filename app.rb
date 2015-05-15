@@ -86,18 +86,3 @@ delete('/venue/:venue_id/band/:id') do
   @bands = @venue.bands()
   erb(:bands)
 end
-
-#------------------------search bands by venue
-get('/bands/venues') do
-  venue_ids = params.fetch('venue_ids')
-  @results = []
-  length = venue_ids.length()
-  length.times() do |time|
-    bands = []
-    bands = (Venue.find(venue_ids[time])).bands()
-    bands.each() do |band|
-      @results.push(band)
-    end
-  end
-  erb(:band_venues)
-end
