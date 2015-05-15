@@ -59,3 +59,19 @@ get('/venue/:venue_id/band/:id') do
   @band = Band.find(id)
   erb(:band)
 end
+
+#-------------------------see all bands
+get('/bands')do
+erb(:all_bands)
+end
+
+#-------------------------update a band
+patch('/venue/:venue_id/band/:id') do
+  name = params.fetch('name')
+  id = params.fetch('id').to_i
+  @band = Band.find(id)
+  @band.update({:name => name})
+  venue_id = params.fetch('venue_id')
+  @venue = Venue.find(venue_id)
+  erb(:band)
+end

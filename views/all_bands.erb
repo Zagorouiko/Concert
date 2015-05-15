@@ -1,0 +1,14 @@
+<h1>All Bands</h1>
+
+<% if Band.all.any? %>
+  <h4>Here are all the Bands:</h4>
+  <ul>
+    <% Band.all.each() do |band| %>
+    <li><%= band.name %></a></li>
+    <% end %>
+  </ul>
+
+  <% else %>
+  <p>You have not listed any bands yet.</p>
+
+  <% end %>

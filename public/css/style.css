@@ -19,7 +19,7 @@ a .hidden {
 }
 
 .jumbotron {
-   background: rgb(200, 54, 54); /* This is for ie8 and below */
+   background: rgb(50, 54, 54);
    background: rgba(15, 15, 15, .25);
 }
 
@@ -28,8 +28,8 @@ a .hidden {
    background: rgba(200, 250, 250, 0.25);
 }
 
-.two {
-	margin-left: auto;
+.one {
+  background-image: url("../images/splash.jpg")
 }
 
 .three {
