@@ -8,5 +8,8 @@ gem("rake")
 
 group(:test) do
   gem('rspec')
+  gem('capybara', :require => 'capybara/rspec')
+  gem('shoulda-matchers')
+  gem('launchy')
   gem('pry')
 end

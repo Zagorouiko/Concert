@@ -9,5 +9,3 @@ class Venue < ActiveRecord::Base
       self.name=(name().capitalize())
     end
   end
-
-  ##I have no idea why my call back works for bands but not venues.

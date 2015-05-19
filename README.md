@@ -13,7 +13,7 @@ Heroku link:
 
 Installation
 ===============
-Retrieve the included Gemfile and Run the following command: -bundle install. Run rake create database and migration,then  create the following tables:
+Clone the repository and run bundle install. Run rake create database and migration,then  create the following tables:
 
 create_table "bands", force: :cascade do |t|
   t.string   "name"
