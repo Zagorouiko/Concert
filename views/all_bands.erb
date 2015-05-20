@@ -4,7 +4,7 @@
   <h4>Here are all the Bands:</h4>
   <ul>
     <% Band.all.each() do |band| %>
-    <li><%= band.name %></a></li>
+      <li><a href="/band/<%= band.id %>/venues"><%= band.name %></a></li>
     <% end %>
   </ul>
 

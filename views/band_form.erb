@@ -2,10 +2,10 @@
 
   <h3>Add a New Band</h3>
   <form action="/bands" method="post">
-    <label for="name">Enter in the name of the band:</label>
-    <input id="name" name="name" class='form-control' placeholder="Band Name" required>
+    <label for="band1">Enter in the name of the band:</label>
+    <input id="band1" name="band1" class='form-control' placeholder="Band Name" required>
 
-    <p><b>Select the venues this band has played at:</b></p>
+    <p><b>Select the venues this band has played in:</b></p>
       <% @venues.each() do |venue| %>
         <div class="checkbox">
           <label>

@@ -1,0 +1,16 @@
+<h1><%= @band.name %> Venues Played</h1>
+
+<% if @venues.any? %>
+  <h4>Here is a list of Venues this band has played in:</h4>
+  <ul>
+    <% @venues.each() do |venue| %>
+    <li><%= venue.name %></a></li>
+    <% end %>
+  </ul>
+
+  <% else %>
+  <p>Has not played at any venues.</p>
+
+  <% end %>
+
+  <a href='/'>Back</a>

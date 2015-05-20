@@ -24,6 +24,13 @@ get('/venue/:id/bands') do
   erb(:bands)
 end
 
+get('/band/:id/venues') do
+  id = params.fetch('id').to_i
+  @band = Band.find(id)
+  @venues = @band.venues()
+  erb(:venues)
+end
+
 #---------------------delete venue
 delete('/venue/:id') do
   id = params.fetch('id').to_i
@@ -39,7 +46,7 @@ get('/bands/new') do
 end
 
 post('/bands') do
-  name = params.fetch('name')
+  name = params.fetch('band1')
   venue_ids = params.fetch('venue_ids')
   new_band = Band.create({:name => name})
   length = venue_ids.length()
