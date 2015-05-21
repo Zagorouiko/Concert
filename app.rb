@@ -31,6 +31,14 @@ get('/band/:id/venues') do
   erb(:venues)
 end
 
+
+delete('/band/:id/venues/') do
+  id = params.fetch('id').to_i
+  band = Band.find(id)
+  band.destroy()
+  redirect('/bands')
+end
+
 #---------------------delete venue
 delete('/venue/:id') do
   id = params.fetch('id').to_i

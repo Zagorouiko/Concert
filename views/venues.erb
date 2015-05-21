@@ -6,11 +6,20 @@
     <% @venues.each() do |venue| %>
     <li><%= venue.name %></a></li>
     <% end %>
+
+
   </ul>
 
   <% else %>
   <p>Has not played at any venues.</p>
 
   <% end %>
+
+  <form action='/band/<%= @band.id %>/venues/' method='post'>
+    <div class='form-group'>
+      <input name="_method" type="hidden" value="delete">
+      <button id='delete_band' class='btn btn-danger'>Delete Band</button>
+    </div>
+  </form>
 
   <a href='/'>Back</a>
